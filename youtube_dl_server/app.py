@@ -123,6 +123,14 @@ ALLOWED_EXTRA_PARAMS = {
     'allsubtitles': bool,
     'subtitlesformat': str,
     'subtitleslangs': list,
+    
+    # more extra params added
+    'call_home': bool,
+    'nocheckcertificate': bool,
+    'hls_prefer_native': bool,
+    'username': str,
+    'password': str,
+    'cookiefile': str
 }
 
 

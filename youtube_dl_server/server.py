@@ -1,5 +1,6 @@
 import argparse
 
+import os
 from .app import app
 from .version import __version__
 
@@ -45,4 +46,8 @@ def main():
         print(__version__)
         exit(0)
 
-    app.run(args.host, args.port, processes=args.number_processes)
+    if os.name == 'posix':
+        app.run(args.host, args.port, processes=args.number_processes, threaded=False)
+    else:
+        #Windows systems does not support forking processes
+        app.run(args.host, args.port, threaded=True, processes=1)
