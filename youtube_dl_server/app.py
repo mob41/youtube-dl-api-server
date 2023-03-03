@@ -130,7 +130,8 @@ ALLOWED_EXTRA_PARAMS = {
     'hls_prefer_native': bool,
     'username': str,
     'password': str,
-    'cookiefile': str
+    'cookiefile': str,
+    'downloader': str
 }
 
 
